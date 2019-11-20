@@ -6,8 +6,8 @@
      "yarn": "1.19.1"
    },
    "scripts": {
-     "build": "yarn --cwd automaintainer-frontend install && yarn --cwd automaintainer-frontend build",
+     "build": "yarn --cwd automaintainer-frontend install",
      "deploy": "cp -a automaintainer-frontend/build/. public/",
-     "heroku-postbuild": "pwd && yarn build && yarn deploy"
+     "heroku-postbuild": "yarn build && yarn deploy"
    }
  }
