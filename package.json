@@ -8,6 +8,6 @@
    "scripts": {
      "build": "yarn --cwd automaintainer-frontend install && yarn --cwd automaintainer-frontend build",
      "deploy": "cp -a automaintainer-frontend/build/. public/",
-     "heroku-postbuild": "yarn build && yarn deploy"
+     "heroku-postbuild": "cd automaintainer-frontend && yarn build && yarn deploy"
    }
  }
