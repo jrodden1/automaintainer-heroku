@@ -7,7 +7,7 @@
    },
    "scripts": {
      "build": "yarn --cwd automaintainer-frontend install",
-     "deploy": "cp -a client/build/. public/",
+     "deploy": "yarn start",
      "heroku-postbuild": "yarn build && yarn deploy"
    }
  }
