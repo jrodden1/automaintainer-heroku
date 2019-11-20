@@ -7,6 +7,10 @@
 # Ignore Mac DS Store files
 .DS_Store
 
+# Ignore node_modules folder
+/automaintainer-frontend/node_modules/*
+/automaintainer-frontend/node_modules
+
 # Ignore bundler config.
 /automaintainer-backend/.bundle
 

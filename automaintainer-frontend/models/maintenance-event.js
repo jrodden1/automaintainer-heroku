@@ -54,7 +54,8 @@ class MaintEvent {
       }
       
       //AJAX call to backend to create new MaintEvent object
-      fetch("http://localhost:3000/maint_events", postOptionsObj)
+      //fetch("http://localhost:3000/maint_events", postOptionsObj) - before Heroku prep
+      fetch("/maint_events", postOptionsObj)
          .then(resp => resp.json())
          .then(newMaintEventData => {
             //Process my new maintEventData & clear my new Maint Event form
@@ -166,7 +167,8 @@ class MaintEvent {
             },
          }
             
-         fetch(`http://localhost:3000/maint_events/${maintEventId}`, deleteOptionsObj)
+         // fetch(`http://localhost:3000/maint_events/${maintEventId}`, deleteOptionsObj) -- before heroku prep
+         fetch(`/maint_events/${maintEventId}`, deleteOptionsObj)
             .then(resp => resp.json())
             .then(item => {
                const maintEventLi = document.querySelector(`#maint-event-${item.id}`)

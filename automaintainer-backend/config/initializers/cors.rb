@@ -7,8 +7,8 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
    allow do
-      origins '*'
-      # should set this to localhost but leaving at * for now.
+      origins 'localhost:3000'
+      # Set to localhost:3000 to enable deployment to heroku and interaction with front end express server.
 
    resource '*',
       headers: :any,

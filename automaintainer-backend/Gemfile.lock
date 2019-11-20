@@ -162,7 +162,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry
   puma (~> 3.11)
-  rack-cors
+  rack-cors (>= 1.0.4)
   rails (~> 5.2.3)
   rspec-rails
   spring

@@ -1,0 +1,2 @@
+web: PORT=3000 yarn --cwd automaintainer-frontend start
+api: PORT=3001 cd automaintainer-backend && bundle exec rails s -p 3001

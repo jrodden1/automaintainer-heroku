@@ -1,0 +1,27 @@
+{
+  "name": "automaintainer-frontend",
+  "version": "1.0.0",
+  "description": "Vanilla JS Frontend SPA for AutoMaintainer",
+  "private": true,
+  "main": "index.js",
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jrodden1/automaintainer.git"
+  },
+  "keywords": [
+    "auto"
+  ],
+  "author": "Jeremiah Rodden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrodden1/automaintainer/issues"
+  },
+  "homepage": "https://github.com/jrodden1/automaintainer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

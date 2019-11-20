@@ -49,7 +49,8 @@ class Vehicle {
       }
 
       //perform AJAX POST fetch for a new vehicle, create a new instance of the vehicle, render it, then close the new form modal and clear the form
-      fetch("http://localhost:3000/vehicles", postOptionsObj)
+      //fetch("http://localhost:3000/vehicles", postOptionsObj) - before heroku prep
+      fetch("/vehicles", postOptionsObj)
          .then(resp => resp.json())
          .then(newVehicleData => {
             let newVehicleInst = new Vehicle(newVehicleData)
@@ -68,7 +69,8 @@ class Vehicle {
 
    //Class method run on DOMContentLoaded - AJAX call to backend to get and render show all existing Vehicles
    static get displayAllVehicles() {
-      fetch("http://localhost:3000" + "/vehicles")
+      //fetch("http://localhost:3000" + "/vehicles") before heroku prep.
+      fetch("/vehicles")
          .then(resp => resp.json())
          .then(vehicles => Vehicle.createVehicleElements(vehicles))
          .catch(error => {

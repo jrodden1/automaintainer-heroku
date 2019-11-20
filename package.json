@@ -1,0 +1,13 @@
+{
+   "name": "automaintainer-demo",
+   "license": "MIT",
+   "engines": {
+     "node": "12.12.0",
+     "yarn": "1.19.1"
+   },
+   "scripts": {
+     "build": "yarn --cwd automaintainer-frontend install && yarn --cwd automaintainer-frontend build",
+     "deploy": "cp -a automaintainer-frontend/build/. public/",
+     "heroku-postbuild": "yarn build && yarn deploy"
+   }
+ }
